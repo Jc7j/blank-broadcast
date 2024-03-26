@@ -1,0 +1,8 @@
+.container {
+  margin-top: var(--size-base);
+  margin-bottom: var(--size-base);
+}
+
+.container button {
+  margin-right: var(--size-base);
+}

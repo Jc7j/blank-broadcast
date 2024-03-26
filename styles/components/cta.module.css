@@ -1,0 +1,15 @@
+.container {
+  background-color: red;
+  padding: var(--size-xxs) var(--size-xl);
+  border-radius: var(--size-5xl);
+}
+
+.colorGray {
+  background-color: var(--theme-gray);
+  color: var(--theme-secondary);
+}
+
+.colorSecondary {
+  background-color: var(--theme-secondary);
+  color: var(--theme-primary);
+}
