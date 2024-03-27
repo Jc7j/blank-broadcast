@@ -1,8 +1,11 @@
 .container {
-  margin-top: var(--size-base);
-  margin-bottom: var(--size-base);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container button {
-  margin-right: var(--size-base);
+.header {
+  text-align: center;
+  font-size: var(--size-5xl);
 }
