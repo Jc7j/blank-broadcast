@@ -1,0 +1,5 @@
+.button {
+  border-radius: 50px;
+  border: 1px solid var(--theme-primary);
+  padding: var(--size-xxs) var(--size-xl);
+}
