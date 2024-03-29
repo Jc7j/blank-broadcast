@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.container svg {
+  width: 30px;
+  fill: white;
+}
+
+.link {
+  border: 1px solid var(--theme-primary);
+  border-radius: 50%;
+  padding: var(--size-xxs);
+  background-color: var(--card-background-color);
+}
+
+.activeLink {
+  background-color: var(--theme-primary);
+}

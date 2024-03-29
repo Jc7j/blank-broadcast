@@ -21,25 +21,35 @@
 .circleContainer {
   overflow: hidden;
   white-space: nowrap;
-  /* position: relative; */
   display: flex;
+  margin-top: var(--size-base);
 }
 
 .circleText {
-  /* animation: slide-in 2s linear infinite; */
-  /* height: 200px; */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 2rem; 
+  animation: slide-in 3s linear infinite;
+  padding-right: var(--size-lg);
   white-space: nowrap;
+  font-size: var(--size-3xl);
+}
+
+.descriptionContainer {
+  padding: var(--size-lg) var(--size-base);
+  margin-top: var(--size-base);
+  font-size: var(--size-2xl);
+  color: var(--card-text-color);
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+}
+
+.descriptionContainer p {
+  margin-bottom: var(--size-base);
 }
 
 @keyframes slide-in {
   0% {
-    transform: translate3d(calc(0% * -1),0,0)
+    transform: translate3d(calc(0% * -1), 0, 0);
   }
   100% {
-    transform: translate3d(calc(-100% - 0%),0,0)
+    transform: translate3d(calc(-100% - 0%), 0, 0);
   }
 }
