@@ -1,7 +1,15 @@
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import { redirect } from 'next/navigation'
+
 import AuthButton from '@/components/AuthButton'
 import styles from '@/styles/pages/main.module.css'
 
-export default function Home() {
+export default async function Home() {
+  const { isAuthenticated } = getKindeServerSession()
+
+  if (await isAuthenticated()) {
+    redirect('/')
+  }
   return (
     <main className={`container ${styles.container}`}>
       <h1 className={styles.header}>BLANK BROADCAST</h1>
