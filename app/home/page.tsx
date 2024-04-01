@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation'
 import NavMenu from '@/components/NavMenu'
 import styles from '@/styles/pages/home.module.css'
 import Posts from '@/components/Posts'
+import CreatePost from '@/components/CreatePost'
 
 export default async function Home() {
   const { isAuthenticated } = getKindeServerSession()
@@ -15,7 +16,9 @@ export default async function Home() {
   return (
     <section className={`container ${styles.container}`}>
       <NavMenu />
+      <CreatePost />
       <Posts />
+      
     </section>
   )
 }
