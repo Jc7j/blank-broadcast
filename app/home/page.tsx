@@ -9,16 +9,14 @@ import CreatePost from '@/components/CreatePost'
 export default async function Home() {
   const { isAuthenticated } = getKindeServerSession()
 
-  if (!await isAuthenticated()) {
+  if (!(await isAuthenticated())) {
     redirect('/')
   }
 
   return (
     <section className={`container ${styles.container}`}>
       <NavMenu />
-      <CreatePost />
       <Posts />
-      
     </section>
   )
 }

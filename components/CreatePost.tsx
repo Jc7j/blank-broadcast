@@ -7,9 +7,9 @@ import { useRouter } from 'next/navigation'
 
 const CreatePostFormSchema = z.object({
   title: z
-  .string()
-  .min(1, 'Content is required')
-  .max(316, 'Max characters is 255'),
+    .string()
+    .min(1, 'Content is required')
+    .max(316, 'Max characters is 255'),
   content: z
     .string()
     .min(1, 'Content is required')
@@ -36,7 +36,7 @@ export default function CreatePost() {
   } = form
 
   async function onSubmitHandler(data: z.infer<typeof CreatePostFormSchema>) {
-    console.log("datatatata", data)
+    console.log('datatatata', data)
     try {
       const res = await fetch('/api/posts', {
         method: 'POST',
@@ -60,14 +60,9 @@ export default function CreatePost() {
 
   return (
     <form onSubmit={handleSubmit(onSubmitHandler)}>
-      <input {...register('title')}/>
-      <textarea
-      {...register("content")}
-        rows={7}
-      />
-      <button type="submit">
-        Send it
-      </button>
+      <input {...register('title')} />
+      <textarea {...register('content')} rows={7} />
+      <button type="submit">Send it</button>
     </form>
   )
 }
